@@ -1,3 +1,8 @@
+  provider "aws" {
+  region     = "ap-south-1"
+  access_key = "AKIAXZTFDIMZLFYIPJ6C"
+  secret_key = "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"
+}
 import "tfplan/v2" as tfplan
 allrule = filter tfplan.resource_changes as _, rc {
   rc.type is "aws_securityhub_standards_subscription" and
